@@ -1,0 +1,103 @@
+.banner{
+  background:  url("../img/banner-background.jpg") center no-repeat;
+  position: relative;
+  padding: 117px 0 136px;
+  background-size: cover;
+  @include r(1219) {
+    padding: 117px 0 50px;
+  }
+  @include r(1023) {
+    padding: 165px 0 39px;
+  }
+  @include r(767) {
+    padding: 100px 0 39px;
+  }
+  &:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: #96A29F;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+    @include r(767) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 410px;
+    margin: 205px 36px 0;
+    @include r(1219) {
+      max-width: 410px;
+      margin: 58px 47px 0;
+    }
+    @include r(1023) {
+      max-width: 305px;
+      margin: 57px 49px 0;
+      width: 100%;
+    }
+    @include r(767) {
+      margin: 0;
+      text-align: center;
+      align-items: center;
+    }
+    &-title{
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 72px;
+      text-transform: uppercase;
+      color: #382F26;
+      @include r(1023) {
+        font-size: 44px;
+      }
+    }
+    &-text{
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 48px;
+      color: #382F26;
+      margin: 0 0 39px;
+      @include r(1023) {
+        font-size: 28px;;
+        margin: 0 0 33px;
+      }
+    }
+    &-btn{
+      width: 170px;
+      height: 50px;
+      background: #E95A0C;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 22px;
+      transition: .3s;
+      &:hover{
+        background: #FFFFFF;
+        color: #E95A0C;
+      }
+    }
+  }
+  &__img{
+    position: relative;
+    right: 92px;
+    @include r(1219) {
+      max-width: 400px;
+      right: 0;
+    }
+  }
+
+}

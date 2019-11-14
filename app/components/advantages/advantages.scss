@@ -1,0 +1,72 @@
+.advantages {
+  background: #ffffff;
+  &__wrap {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin: -65px 188px 0 0;
+    @include r(1219) {
+      margin: 0 auto;
+      justify-content:center;
+    }
+  }
+  &__tab{
+    cursor: pointer;
+    background: #efeae6;
+    width: 245px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @include r(767) {
+      width: 170px;
+      height: 88px;
+    }
+    @include r(479) {
+      width: 84px;
+      height: auto;
+      padding: 11px 3px;
+      text-align: center;
+    }
+    &:hover{
+      background: #FFFAF6;
+    }
+    &-text{
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      font-feature-settings: 'case' on;
+      color: #382F26;
+      margin: 9px 0 0;
+      @include r(767) {
+        font-size: 14px;
+      }
+    }
+    &-cont{
+      background: red;
+      height: 350px;
+      width: 100%;
+    }
+
+  }
+  &__descr{
+    height: 282px;
+    font-size: 40px;
+    font-weight: 700;
+    @include r(1023) {
+      height: auto;
+      padding: 20px 0;
+    }
+    &-item{
+      display: none;
+      font-size: 50px;
+      font-weight: 700;
+    }
+  }
+}
+
+.active-tab{
+  background: #FFFAF6;
+  display: flex;
+}
